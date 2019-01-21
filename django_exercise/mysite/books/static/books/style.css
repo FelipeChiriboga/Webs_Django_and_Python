@@ -1,0 +1,20 @@
+body{
+    //background: white url(image/back.jpg);
+
+}
+
+.jumbotron{
+
+    background: white url("images/yellow.jpg");
+}
+
+.jumbotron-special{
+
+    background: white url("images/purple.jpg");
+
+}
+
+.jumbotron-special h2{
+
+    color: white;
+}
