@@ -1,0 +1,39 @@
+{% load staticfiles %}
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="{% static 'photoapp/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'photoapp:index' %}">Photo Place</a>
+        
+            <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="">
+                            <a href="{% url 'photoapp:index' %}">
+                                <span class="glyphicon glyphicon-camera" area-hidden="true"></span>&nbsp; Images
+                            </a>
+        
+                        </li>
+                    </ul>    
+                </div>     
+        </div>
+
+        
+    </nav>
+    <u>
+        {% for photo in all_photos %}
+    
+            <li> 
+                <a href="{% url 'photoapp:detail' photo.id %}">{{photo.name}}</a>
+            </li>
+    
+        {% endfor %}
+    </u>
+</body>
+
+</html>
